@@ -1,0 +1,14 @@
+
+# Dependencies
+/node_modules
+
+# Parcel
+.cache/
+dist/
+
+# OS Files
+.DS_Store
+.DS_Store?
+
+# Keys
+keys.json

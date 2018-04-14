@@ -1,0 +1,14 @@
+{
+  "name": "iot_kits",
+  "version": "1.0.0",
+  "description": "Internet of Things kits for the TRACE / SAIC pilot program.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amanda Yamasaki",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.7.0"
+  }
+}
