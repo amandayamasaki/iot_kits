@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IoT Kits</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+	
+	<div>
+		<button onclick="testFunct()">my button</button>
+	</div>
+
+	<script type="text/javascript">
+
+		var myPhoton = "2b0036001847353236343033";
+
+		function testFunct(){
+	      	$.post("/api/new", "hello aldo")
+	        	.then(function(data) {
+	          		// console.log(data);
+	        	});
+		}
+
+	</script>
+
+</body>
+</html>
