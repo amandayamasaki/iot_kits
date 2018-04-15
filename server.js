@@ -18,15 +18,20 @@ const password = keys.PASS;
 const authCode = keys.AUTH_CODE;
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "/client/index.html"));
+});
+
+
+app.post("/api/new", function(req, res) {
+  console.log(req.body);
+  var action = req.body.action;
+  console.log(action);
+
+  res.end()
 });
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
-});
-
-app.post("/api/new", function(req, res) {
-  console.log(req.body);
 });
 
 

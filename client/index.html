@@ -3,26 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>IoT Kits</title>
-	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 </head>
 <body>
 	
 	<div>
-		<button onclick="testFunct()">my button</button>
+		<button id="myButton">my button</button>
 	</div>
 
 	<script type="text/javascript">
 
 		var myPhoton = "2b0036001847353236343033";
 
-		function testFunct(){
-	      	$.post("/api/new", "hello aldo")
-	        	.then(function(data) {
-	          		// console.log(data);
-	        	});
-		}
+		$("#myButton").on("click", function() {
+			var command = {
+				id: myPhoton,
+				action: "light_up"
+
+			}
+
+		  	$.post('/api/new', command)
+			.then(function(data) {
+				console.log("sent")
+			});
+		});
 
 	</script>
-
 </body>
 </html>
