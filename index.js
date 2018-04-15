@@ -1,6 +1,6 @@
-var Particle = require('particle-api-js');
 var particle = new Particle();
 var keys = require('./keys.json');
+
 
 var deviceOneId = keys.ID_ONE;
 var authCode = keys.AUTH_CODE;
